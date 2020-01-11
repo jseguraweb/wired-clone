@@ -1,0 +1,14 @@
+{
+  "name": "wired-form",
+  "version": "1.0.0",
+  "description": "## Description:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jaime Segura",
+  "license": "ISC",
+  "devDependencies": {
+    "dart-sass": "^1.24.4"
+  }
+}
