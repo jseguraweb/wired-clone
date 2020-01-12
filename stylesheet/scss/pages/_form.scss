@@ -5,12 +5,13 @@
 
 .form-header {
     @include flex-column;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0;
     position: relative;
     background-color: $yellow;
 
     .header-wrapper-top {
         @include flex-row;
+        padding: 0 1rem;
 
         #toggle-options {
             @include main-text;
@@ -18,20 +19,23 @@
             font-size: 0.8rem;
             font-weight: 600;
             padding: 0.5rem;
+            border: 0;
+            background-color: transparent;
         }
 
-        .options-menu {
-            @include main-text;
-            @include flex-column;
-            position: absolute;
-            top: 3rem;
-            left: 50%;
-            margin-left: -90px;
-            line-height: 1.8;
-            display: none;
-        }
     }
 
+    #options-menu {
+        @include main-text;
+        @include flex-column;
+        text-align: center;
+        line-height: 1.8;
+        display: none;
+        height: 100%;
+        width: 100%;
+        padding: 1rem 0 0;
+    }
+    
     .header-wrapper-bottom {
         @include flex-column;
         align-items: center;
