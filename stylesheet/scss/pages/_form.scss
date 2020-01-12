@@ -1,0 +1,52 @@
+@use "./../_base.scss" as *;
+@use "./../_layout.scss" as *;
+@use "./../_component.scss" as *;
+
+
+.form-header {
+    @include flex-column;
+    padding: 0.5rem 1rem;
+    position: relative;
+    background-color: $yellow;
+
+    .header-wrapper-top {
+        @include flex-row;
+
+        #toggle-options {
+            @include main-text;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.5rem;
+        }
+
+        .options-menu {
+            @include main-text;
+            @include flex-column;
+            position: absolute;
+            top: 3rem;
+            left: 50%;
+            margin-left: -90px;
+            line-height: 1.8;
+            display: none;
+        }
+    }
+
+    .header-wrapper-bottom {
+        @include flex-column;
+        align-items: center;
+        justify-content: center;
+        margin: 1.5rem 0;
+
+        h1 {
+            @include main-text;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        h2 {
+            @include lead;
+            font-size: 1.2rem;
+        }
+    }
+}

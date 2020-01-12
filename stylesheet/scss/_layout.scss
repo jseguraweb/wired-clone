@@ -1,0 +1,17 @@
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin image-setting {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

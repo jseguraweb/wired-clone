@@ -1,0 +1,148 @@
+@use "./../_base.scss" as *;
+@use "./../_layout.scss" as *;
+@use "./../_component.scss" as *;
+
+.main-header {
+    width: 100%;
+    height: 7vh;
+    padding: 0.5rem 1rem;
+    box-shadow: 0px 3px 7px rgb(160, 159, 159);
+    background-color: #fff;
+    position: fixed;
+
+    @include flex-row;
+
+    nav {
+        @include flex-column;
+
+        #toggle-menu {
+            font-size: 1.5rem;
+            color: grey;
+            cursor: pointer;
+        }
+
+        .menu {
+            width: 100%;
+            height: 93vh;
+            position: absolute;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            top: -100vh;
+            left: 0;
+            background-color: #fff;
+            border-top: 1px solid $light-grey;
+            transition-duration: 0.3s;
+            z-index: -2;
+
+            li {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                margin: auto 0;
+                @include flex-column;
+                @include mini-heading;
+                @include lead;
+                justify-content: center;
+
+                a {
+                    color: grey;
+                }
+
+                .icon {
+                    font-size: 3rem;
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+
+    .subscribe {
+        @include subscribe-btn;
+        @include mini-heading;
+        @include lead;
+        background-color:#12679B;
+    }
+    
+
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    @include flex-column;
+    background-color: $main-background;
+}
+
+#subscription {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin: 4rem 0 0.5rem;
+    @include red-to-white;
+    @include flex-row;
+    @include main-text;
+    line-height: 1.1;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.subscribe-btn {
+    @include subscribe-btn;
+    @include mini-heading;
+    @include lead;
+    background-color: #000;
+    border-radius: 0;
+    padding: 0.8rem 2rem;
+}
+
+.container {
+    padding: 1rem;
+    @include flex-column;
+    justify-content: space-between;
+}
+
+section {
+    border: 1px solid $light-grey;
+    border-top: 10px solid #000;
+    margin-bottom: 2rem;
+    background-color: #fff;
+}
+
+.big-article:first-of-type {
+    border-top: 1px solid $light-grey;
+}
+
+.big-article {
+    display: grid;
+    grid-template-rows: 2.3fr 1fr;
+    padding: 1rem;
+
+    .img-big-article {
+        @include image-setting;
+        background-image: url("../../img/backgrounds/pic.jpg");
+    }
+
+    .text-wrapper {
+        padding: 1rem 0 0;
+    }
+}
+
+.small-article {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 1rem;
+    padding: 1rem;
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .img-small-article {
+        @include image-setting;
+        background-image: url("../../img/backgrounds/pic9.jpg");
+    }
+}
+
+@media screen and (min-width: $small-screen) {
+
+}

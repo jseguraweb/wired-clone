@@ -2,6 +2,5 @@
 * Author: Jaime Segura
 */
 
-@use "variables" as *;
-@use "typo" as *;
-@use "layout" as *;
+@use "pages/_landing.scss" as *;
+@use "pages/_form.scss" as *;

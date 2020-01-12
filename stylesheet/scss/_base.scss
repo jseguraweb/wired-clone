@@ -1,0 +1,89 @@
+// reset
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.fas {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.fab {
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400;
+}
+
+// media queries
+
+$small-screen: 600 + px;
+
+// colors
+
+$light-grey: rgb(212, 212, 212);
+$main-background: #f6f6f6;
+$yellow: #F5BF36;
+
+@mixin red-to-white {
+    background: #e53935;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #e35d5b, #e53935);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #e35d5b, #e53935); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+// typography
+
+.logo {
+    display: block;
+    width: 120px;
+    height: auto;
+}
+
+@mixin main-text {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin mini-heading {
+    font-family: 'Courier Prime', monospace;
+}
+
+@mixin lead {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+@mixin author {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    @include main-text();
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.1;
+    padding: 0.4rem 0;
+}
+
+h3 {
+    @include main-text();
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+h4 {
+    @include mini-heading();
+    @include lead();
+    color: grey;
+}
+
+// form
+
+@mixin form-heading {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
