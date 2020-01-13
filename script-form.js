@@ -11,6 +11,7 @@ toggleOptions.addEventListener("click", function(){
 
 // optionalGift is an input
 const optionalGift = document.querySelector(".switch");
+const giftCheck = document.querySelector("#gift");
 
 let giftIsSelected = true;
 // console.log(`giftIsSelected is at the beginning ${giftIsSelected}`);
@@ -24,6 +25,7 @@ const changeSelectedButton = (event) => {
         event.style.color = "#057DBC";
         event.firstElementChild.style.borderColor = "#057DBC";
         event.firstElementChild.style.backgroundColor = "rgb(46, 151, 207)";
+        giftCheck.checked = true;
         giftIsSelected = false;
         // console.log(`giftIsSelected is now ${giftIsSelected}`);
     } else {
@@ -35,6 +37,7 @@ const changeSelectedButton = (event) => {
         event.style.color = "grey";
         event.firstElementChild.style.borderColor = "grey";
         event.firstElementChild.style.backgroundColor = "transparent";
+        giftCheck.checked = false;
         giftIsSelected = true;
         // console.log(`giftIsSelected is now ${giftIsSelected}`);
     }
