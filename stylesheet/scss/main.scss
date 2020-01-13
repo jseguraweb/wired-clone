@@ -2,5 +2,5 @@
 * Author: Jaime Segura
 */
 
-@use "pages/_landing.scss" as *;
-@use "pages/_form.scss" as *;
+@use "modules/_landing";
+@use "modules/_form";

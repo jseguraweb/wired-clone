@@ -28,6 +28,241 @@
             <h2>The future is already here</h2>
         </div>
     </header>
+    <main>
+        <ul class="subscription-steps">
+            <li class="step">Location</li>
+            <li class="step">Plan</li>
+            <li class="step">Payment</li>
+            <li class="step">Address</li>
+            <li class="step">Submit</li>
+        </ul>
+        <form action="#">
+            <label for="gift" class="optional"><span>This is a gift <i class="fas fa-gift"></i></span>
+                <input type="checkbox" id="gift" name="gift" value="gift">
+            </label>
+            <fieldset id="location">
+                <legend>Step 1. Location</legend>
+                <label for="US"><span>US</span>
+                    <input type="radio" id="US" name="US" value="US">
+                </label>
+                <label for="international">International
+                    <input type="radio" id="international" name="international" value="international">
+                </label>
+            </fieldset>
+            <fieldset id="plan">
+                <legend>Step 2. Choose your plan</legend>
+                <label for="print-digital-6">
+                    <div class="plan">
+                        <input type="radio" id="print-digital-6" name="print-digital-6" value="print-digital-6">
+                        <h4>Print + Digital Access</h4>
+                        <h3>6 months for 5€</h3>
+                        <button>Select</button>
+                        <ul class="benefits">
+                            <li class="advantage">Unlimited access to WICKED.com</li>
+                            <li class="advantage">Print subscription</li>
+                            <li class="advantage">Digital edition of the magazine</li>
+                        </ul>
+                        <img src="" alt="">
+                    </div>
+                </label>
+                <label for="print-digital-1">
+                    <div class="plan">
+                        <input type="radio" id="print-digital-1" name="print-digital-1" value="print-digital-1" checked>
+                        <h4>Print + Digital Access</h4>
+                        <h3>1 year for $10</h3>
+                        <button>Select</button>
+                        <ul class="benefits">
+                            <li class="advantage">Unlimited access to WICKED.com</li>
+                            <li class="advantage">Print subscription</li>
+                            <li class="advantage">Digital edition of the magazine</li>
+                        </ul>
+                        <img src="" alt="">
+                    </div>
+                </label>
+                <label for="digital-6">
+                    <div class="plan">
+                        <input type="radio" id="digital-6" name="digital-6" value="digital-6">
+                        <h4>Digital Only Access</h4>
+                        <h3>6 months for 5€</h3>
+                        <button>Select</button>
+                        <ul class="benefits">
+                            <li class="advantage">Unlimited access to WICKED.com</li>
+                            <li class="advantage">Digital edition of the magazine</li>
+                        </ul>
+                        <img src="" alt="">
+                    </div>
+                </label>
+            </fieldset>
+            <fieldset id="payment">
+                <legend>Step 3. Payment details</legend>
+                <p>You may cancel at any time.</p>
+                <label for="cc">
+                    <input type="checkbox" id="cc" name="cc" value="Credit Card">Credit Card
+                </label>
+                <label for="amazon-pay">
+                    <input type="checkbox" id="amazon-pay" name="amazon-pay" value="amazon-pay"><i
+                        class="fab fa-amazon"></i>
+                </label>
+                <label for="paypal">
+                    <input type="checkbox" id="paypal" name="paypal" value="PayPal"><i class="fab fa-cc-paypal"></i>
+                </label>
+                <div class="payment-options">
+                    <div class="option-cc">
+                        <label for="credit-debit-card">Credit/Debit Card Number
+                            <input type="tel" id="cc-number" name="cc-number" pattern="\d*" maxlength="16"
+                                placeholder="1234 1234 1234 1234">
+                        </label>
+                        <div class="wrap-cc-data">
+                            <div class="cc-info">
+                                <label for="months">Valid Thru
+                                    <input type="text" list="months" id="months-list" name="months-list"
+                                        placeholder="MM">
+                                </label>
+                                <datalist id="months">
+                                    <option value="Jan"></option>
+                                    <option value="Feb"></option>
+                                    <option value="Mar"></option>
+                                    <option value="Apr"></option>
+                                    <option value="May"></option>
+                                    <option value="Jun"></option>
+                                    <option value="Jul"></option>
+                                    <option value="Aug"></option>
+                                    <option value="Sep"></option>
+                                    <option value="Oct"></option>
+                                    <option value="Nov"></option>
+                                    <option value="Dec"></option>
+                                </datalist>
+                            </div>
+                            <div class="cc-info">
+                                <label for="years">
+                                    <input type="text" list="years" id="years-list" name="years-list" placeholder="YY">
+                                </label>
+                                <datalist id="years">
+                                    <option value="2020"></option>
+                                    <option value="2021"></option>
+                                    <option value="2022"></option>
+                                    <option value="2023"></option>
+                                    <option value="2024"></option>
+                                    <option value="2025"></option>
+                                    <option value="2026"></option>
+                                    <option value="2027"></option>
+                                    <option value="2028"></option>
+                                    <option value="2029"></option>
+                                    <option value="2030"></option>
+                                </datalist>
+                            </div>
+                            <div class="cc-info">
+                                <label for="cvv">CVV
+                                    <input type="number" id="cvv" name="cvv" pattern="\d*" maxlength="3">
+                                </label>
+                            </div>
+                        </div>
+                        <!--div.wrap-cc-data-->
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset id="shipping">
+                <legend>Step 4. Shipping address</legend>
+                <label for="one-year-gift" class="optional"><span>Yes, I would like to gift one year of WIRED for just
+                        $10.</span>
+                    <input type="checkbox" id="one-year-gift" name="one-year-gift" value="one-year-gift">
+                </label>
+                <fieldset id="personal-info">
+                    <legend>Enter Your Information</legend>
+                    <label for="first-name">First Name
+                        <input type="text" id="first-name" name="first-name">
+                    </label>
+                    <legend>Enter Your Information</legend>
+                    <label for="first-name">First Name
+                        <input type="text" id="first-name" name="first-name">
+                    </label>
+                    <label for="last-name">Last Name
+                        <input type="text" id="last-name" name="last-name">
+                    </label>
+                    <label for="street">Street Address
+                        <input type="text" id="street" name="street">
+                    </label>
+                    <label for="apt">Apt, Floor, Unit, etc. (optional)
+                        <input type="text" id="apt" name="apt">
+                    </label>
+                    <label for="city">City
+                        <input type="text" id="city" name="city">
+                    </label>
+                    <label for="state">State
+                        <input type="text" id="state" name="state">
+                    </label>
+                    <label for="zip">Zip
+                        <input type="text" id="zip" name="zip">
+                    </label>
+                    <label for="email">Email
+                        <input type="email" id="email" name="email">
+                    </label>
+                </fieldset>
+            </fieldset>
+            <div class="renewal-info">
+                <h5>Automatic Renewal:</h5>
+                <p>
+                    Your subscription will automatically renew. You may cancel at any time. Before each renewal, we will
+                    send a reminder
+                    with the term and rate then in effect (current rates listed below). If you do nothing, we will
+                    charge the payment method
+                    you selected. To cancel, contact customer service as shown below to receive a full refund for all
+                    unserved issues.
+                </p>
+                <p>
+                    By subscribing you agree to our <a href="#">User Agreement</a> and <a href="">Privacy Policy &
+                        Cookie Statement</a>.
+                </p>
+            </div>
+            <fieldset id=" submit">
+                <legend>Step 5. Review and submit</legend>
+                <input type="submit" id="place-order" value="Place Order">
+                <p>
+                    <i class="fas fa-lock"></i> This transaction is secured with SSL encryption
+                </p>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>
+            Customer Service can be reached at <a
+                href="http://www.wired.com/customerservice">wired.com/customerservice</a>,
+            1-800-769-4733, or by <a href="#">e-mail</a>.
+        </p>
+        <p>
+            WIRED publishes monthly, except the combined July/August issue and other combined issues that count as two,
+            as indicated
+            on the issue's cover.
+        </p>
+        <p>
+            First issue mails within 6 weeks. Plus sales tax where applicable.
+        </p>
+        <p>
+            The current annual rates are: In the U.S., a bundle subscription is $49.99. In Canada, a bundle subscription
+            is $59.99.
+            In all other countries, a bundle subscription is $70. A digital-only subscription is $29.99 in all
+            countries.
+        </p>
+        <p>
+            Introductory offers are only available to customers who have not been subscribed to WIRED within the last
+            180 days. All
+            orders subject to approval. Limit one free gift per address, as applicable. By ordering, you agree not to
+            resell any
+            subscriptions purchased from this site.
+        </p>
+        <p>
+            Subscribers: If the Post Office alerts us that your magazine is undeliverable, we have no further obligation
+            unless we
+            receive a corrected address within one year.
+        </p>
+        <div class="wrapper-policy">
+            <a href="#">User Agreement</a>
+            <a href="#">Privacy Policy (your CA Privacy Rights)</a>
+        </div>
+        <p>
+            Copyright &copy 2020 Condé Nast Digital. All rights reserved.
+        </p>
+    </footer>
     <script type="text/javascript" src="script-form.js"></script>
 </body>
 
