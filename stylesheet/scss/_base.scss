@@ -24,9 +24,11 @@ $small-screen: 600 + px;
 
 // colors
 
-$light-grey: rgb(212, 212, 212);
+$light-grey: #F2F2F2;
+$bar-grey: #D8D8D8;
 $main-background: #f6f6f6;
 $yellow: #F5BF36;
+$blue: #057DBC;
 
 @mixin red-to-white {
     background: #e53935;  /* fallback for old browsers */

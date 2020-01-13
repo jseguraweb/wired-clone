@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Subscribe Wicked</title>
-    <link rel="stylesheet" href="./stylesheet/reset.css">
-    <link rel="stylesheet" href="./stylesheet/normalize.css">
+    <link rel="stylesheet" href="./third-party/reset.css">
+    <link rel="stylesheet" href="./third-party/normalize.css">
     <link rel="stylesheet" href="./stylesheet/style.css">
     <script src="https://kit.fontawesome.com/b1c25c50a2.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Courier+Prime|Montserrat:400,700&display=swap" rel="stylesheet">
@@ -29,17 +29,26 @@
         </div>
     </header>
     <main>
-        <ul class="subscription-steps">
-            <li class="step">Location</li>
-            <li class="step">Plan</li>
-            <li class="step">Payment</li>
-            <li class="step">Address</li>
-            <li class="step">Submit</li>
-        </ul>
+        <div class="subscription-bar">
+            <ul class="subscription-steps">
+                <li class="step one"><a href="#location">Location</a></li>
+                <li class="step two"><a href="#plan">Plan</a></li>
+                <li class="step three"><a href="#payment">Payment</a></li>
+                <li class="step four"><a href="#shipping">Address</a></li>
+                <li class="step five"><a href="#submit">Submit</a></li>
+            </ul>
+            <div class="big-bar">
+                <div class="small-bar"></div>
+            </div>
+        </div>
         <form action="#">
-            <label for="gift" class="optional"><span>This is a gift <i class="fas fa-gift"></i></span>
-                <input type="checkbox" id="gift" name="gift" value="gift">
-            </label>
+            <div class="optional">
+                <label for="gift" class="optional-gift">
+                    <span class="checkbox-custom"></span>
+                    <input type="checkbox" id="gift" name="gift" value="gift">
+                    <span>This is a gift <i class="fas fa-gift"></i></span>
+                </label>
+            </div>
             <fieldset id="location">
                 <legend>Step 1. Location</legend>
                 <label for="US"><span>US</span>
@@ -52,7 +61,7 @@
             <fieldset id="plan">
                 <legend>Step 2. Choose your plan</legend>
                 <label for="print-digital-6">
-                    <div class="plan">
+                    <div class="plan-option">
                         <input type="radio" id="print-digital-6" name="print-digital-6" value="print-digital-6">
                         <h4>Print + Digital Access</h4>
                         <h3>6 months for 5€</h3>
@@ -66,7 +75,7 @@
                     </div>
                 </label>
                 <label for="print-digital-1">
-                    <div class="plan">
+                    <div class="plan-option">
                         <input type="radio" id="print-digital-1" name="print-digital-1" value="print-digital-1" checked>
                         <h4>Print + Digital Access</h4>
                         <h3>1 year for $10</h3>
@@ -80,7 +89,7 @@
                     </div>
                 </label>
                 <label for="digital-6">
-                    <div class="plan">
+                    <div class="plan-option">
                         <input type="radio" id="digital-6" name="digital-6" value="digital-6">
                         <h4>Digital Only Access</h4>
                         <h3>6 months for 5€</h3>
@@ -163,10 +172,14 @@
             </fieldset>
             <fieldset id="shipping">
                 <legend>Step 4. Shipping address</legend>
-                <label for="one-year-gift" class="optional"><span>Yes, I would like to gift one year of WIRED for just
-                        $10.</span>
-                    <input type="checkbox" id="one-year-gift" name="one-year-gift" value="one-year-gift">
-                </label>
+                <div class="optional">
+                    <label for="one-year-gift"><span>Yes, I would like to gift one year of WIRED for just
+                            $10.</span>
+                        <span class="checkbox-custom"></span>
+                        <input type="checkbox" id="one-year-gift" class="optional-gift" name="one-year-gift"
+                            value="one-year-gift">
+                    </label>
+                </div>
                 <fieldset id="personal-info">
                     <legend>Enter Your Information</legend>
                     <label for="first-name">First Name
@@ -214,7 +227,7 @@
                         Cookie Statement</a>.
                 </p>
             </div>
-            <fieldset id=" submit">
+            <fieldset id="submit">
                 <legend>Step 5. Review and submit</legend>
                 <input type="submit" id="place-order" value="Place Order">
                 <p>

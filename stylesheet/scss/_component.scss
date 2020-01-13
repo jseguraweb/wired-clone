@@ -3,3 +3,39 @@
     color: #fff;
     border-radius: 3px;
 }
+
+@mixin bar {
+    border-radius: 45px;
+    height: 10px;
+}
+
+//Payment steps - before elements
+.one {
+    &::before {
+        content: "1. ";
+    }
+}
+
+.two {
+    &::before {
+        content: "2. ";
+    }
+}
+
+.three {
+    &::before {
+        content: "3. ";
+    }
+}
+
+.four {
+    &::before {
+        content: "4. ";
+    }
+}
+
+.five {
+    &::before {
+        content: "5. ";
+    }
+}
