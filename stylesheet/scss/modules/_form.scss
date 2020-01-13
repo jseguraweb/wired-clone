@@ -110,57 +110,54 @@ fieldset {
 
 .optional {
     @include thin-bottom-border;
-    @include flex-column;
     @include main-text;
-
-    color: grey;
-    height: 4rem;
+    @include flex-column;
     align-items: center;
     justify-content: center;
+    color: grey;
     font-size: 1rem;
-
-    &:hover {
-        span {
-            color: $blue;
-        }
-        .checkbox-custom::after {
-            border: 2px solid $blue;
-        }
-    }
+    padding: 1rem 0;
+    height: 5rem;
 }
 
-.optional-gift {
-    input {
-        opacity: 0;
-    }
-
-    padding: 0.8rem 1.2rem 0.8rem 2rem;
-        
-    &:hover {
-        cursor: pointer;
-    }
-
-}
-
-.checkbox-custom {
-    position: absolute;
-    width: 20px;
-    height: 20px;
+.switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 12rem;
+    height: auto;
     
-    &::after {
-        content: "";
-        position: absolute;
-        top: -4px;
-        left: -1rem;
+    #gift {
+        opacity: 1;
+        width: 0;
+        height: 0;
+    }  
+    
+    .checkbox-custom {
         width: 20px;
         height: 20px;
         border: 2px solid grey;
         border-radius: 50%;
+        margin-right: 0.5rem;
+        position: relative;
+        top: -1px;
     }
+    
+    .fa-gift {
+        margin-left: 0.5rem;
+    }
+    
+    &:hover {
+        cursor: pointer;
+        * {
+            color: $blue;
+        }
+        .checkbox-custom {
+            border-color: $blue !important;
+        }
 
-
+    }
 }
 
-.fa-gift {
-    margin-left: 0.5rem;
-}
