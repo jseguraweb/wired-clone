@@ -49,9 +49,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
-    width: 12rem;
+    padding: 0.8rem 2.5rem;
     height: auto;
+    min-width: 10rem;
     color: grey;
 
     &:hover {
@@ -65,11 +65,19 @@
     }
 }  
 
+.switch-big {
+    width: 12rem;
+    padding: 1rem;
+}
+
 .rounded-border {
     border: 1px solid grey;
     border-radius: 10px;
-    span {
-        padding: 0rem 3rem;
+    // span {
+    //     padding: 0rem 2rem;
+    // }
+    &:hover {
+        border: 1px solid #057DBC;
     }
 }
 

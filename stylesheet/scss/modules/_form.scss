@@ -18,6 +18,16 @@ form {
 
 fieldset {
     @include thin-bottom-border;
+
+    h3 {
+        @include mini-heading;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+    }
+
+    legend {
+        text-align: center;
+    }
 }
 
 .form-header {
@@ -28,6 +38,7 @@ fieldset {
 
     .header-wrapper-top {
         @include flex-row;
+        justify-content: space-between;
         padding: 0 1rem;
 
         #toggle-options {
@@ -86,7 +97,7 @@ fieldset {
 
 .subscription-steps {
     @include flex-row;
-
+    justify-content: space-between;
     width: 90%;
     margin-bottom: 0.3rem;
 }
@@ -148,35 +159,23 @@ fieldset {
 
 // step 1: location
 
-.step {
+.labels-wrapper {
     @include flex-column;
-    width: 100%;
-    height: auto;
-    justify-content: end;
+    justify-content: center;
 
-    legend {
-        margin: 0 auto;
-    }
-
-    h3 {
-        @include mini-heading; 
-        text-transform: uppercase;  
-        font-size: 1.3rem;
-        margin-top: 1rem;
+    @media screen and (min-width: 400px){
+        @include flex-row;
     }
 }
 
-.labels-wrapper {
-    @include flex-row;
-    justify-content: space-around;
+.market {
     @include main-text;
-    font-size: 1.1rem;
     font-weight: 600;
-    width: 100%;
-    height: auto;
+    margin: 0.5rem;
+    width: 90%;
 
-    label {
-        min-width: 45%;
+    @media screen and (min-width: 600px){
+        width: 16rem;
     }
 }
 

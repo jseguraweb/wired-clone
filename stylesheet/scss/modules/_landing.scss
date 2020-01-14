@@ -16,6 +16,7 @@ body {
     position: fixed;
 
     @include flex-row;
+    justify-content: space-between;
 
     nav {
         @include flex-column;
@@ -85,6 +86,7 @@ body {
     margin: 5rem auto 1.3rem;
     @include red-to-white;
     @include flex-row;
+    justify-content: space-between;
     @include main-text;
     line-height: 1.1;
     color: #fff;
