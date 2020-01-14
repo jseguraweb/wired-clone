@@ -12,30 +12,22 @@ toggleOptions.addEventListener("click", function(){
 // optionalGift is an input
 const optionalGift = document.querySelector(".switch");
 const giftCheck = document.querySelector("#gift");
+const check = document.querySelector("#check");
 
 let giftIsSelected = true;
 // console.log(`giftIsSelected is at the beginning ${giftIsSelected}`);
 const changeSelectedButton = (event) => {
     if(giftIsSelected){
         // console.log("giftIsSelected is true!");
-        event.style.border = "1px solid #057DBC";
-        event.style.borderRadius = "10px";
-        event.style.backgroundColor = "rgba(160, 209, 255, 0.541)";
-        event.style.boxShadow = "inset 2px 2px 5px #057DBC"
-        event.style.color = "#057DBC";
-        event.firstElementChild.style.borderColor = "#057DBC";
-        event.firstElementChild.style.backgroundColor = "rgb(46, 151, 207)";
+        event.classList.add("pressed-button");
+        check.style.stroke = "#057DBC";
         giftCheck.checked = true;
         giftIsSelected = false;
         // console.log(`giftIsSelected is now ${giftIsSelected}`);
     } else {
         // console.log("giftIsSelected is false!");
-        event.style.border = "1px solid grey";
-        event.style.border = "none";
-        event.style.backgroundColor = "transparent";
-        event.style.boxShadow = "none"
-        event.style.color = "grey";
-        event.firstElementChild.style.borderColor = "grey";
+        event.classList.remove("pressed-button");
+        check.style.stroke = "#fff";
         event.firstElementChild.style.backgroundColor = "transparent";
         giftCheck.checked = false;
         giftIsSelected = true;
