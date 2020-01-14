@@ -4,8 +4,16 @@
 
 // header
 
+.body-form {
+    max-width: 1024px;
+    margin: 0 auto;
+    box-shadow: 0px 1px 4px grey;
+}
+
 form {
     background-color: #fff;
+    height: auto;
+    width: 100%;
 }
 
 fieldset {
@@ -49,7 +57,7 @@ fieldset {
         @include flex-column;
         align-items: center;
         justify-content: center;
-        margin: 1.5rem 0;
+        margin: 2rem 0;
 
         h1 {
             @include main-text;
@@ -83,7 +91,7 @@ fieldset {
     margin-bottom: 0.3rem;
 }
 
-.step {
+.li-step {
     @include mini-heading;
     @include lead;
     font-weight: 600;
@@ -114,49 +122,67 @@ fieldset {
     @include flex-column;
     align-items: center;
     justify-content: center;
-    color: grey;
     font-size: 1rem;
     padding: 1rem 0;
     height: 5rem;
 }
 
-.switch {
+.checkbox-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid grey;
+    border-radius: 50%;
+    margin-right: 0.7rem;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    width: 12rem;
-    height: auto;
-    
-    #gift {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }  
-    
-    .checkbox-custom {
-        width: 20px;
-        height: 20px;
-        border: 2px solid grey;
-        border-radius: 50%;
-        margin-right: 0.7rem;
-        position: relative;
-    }
-    
-    .fa-gift {
-        margin-left: 0.5rem;
-    }
-    
-    &:hover {
-        cursor: pointer;
-        * {
-            color: $blue;
-        }
-        .checkbox-custom {
-            border-color: $blue !important;
-        }
+}
 
+#gift {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}  
+
+.fa-gift {
+    margin-left: 0.5rem;
+}
+
+// step 1: location
+
+.step {
+    @include flex-column;
+    width: 100%;
+    height: auto;
+    justify-content: end;
+
+    legend {
+        margin: 0 auto;
+    }
+
+    h3 {
+        @include mini-heading; 
+        text-transform: uppercase;  
+        font-size: 1.3rem;
+        margin-top: 1rem;
     }
 }
 
+.labels-wrapper {
+    @include flex-row;
+    justify-content: space-around;
+    @include main-text;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 100%;
+    height: auto;
+
+    label {
+        min-width: 45%;
+    }
+}
+
+#US,
+#international {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}

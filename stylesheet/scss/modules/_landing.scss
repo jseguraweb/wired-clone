@@ -2,6 +2,11 @@
 @use "./../_layout.scss" as *;
 @use "./../_component.scss" as *;
 
+
+body {
+    background-color: $main-background;
+}
+
 .main-header {
     width: 100%;
     height: 7vh;
@@ -67,17 +72,17 @@
 }
 
 .main-landing {
-    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
     height: 100%;
     padding: 0 1rem;
     @include flex-column;
-    background-color: $main-background;
 }
 
 #subscription {
     width: 90%;
     padding: 1rem;
-    margin: 6rem auto 0.5rem;
+    margin: 5rem auto 1.3rem;
     @include red-to-white;
     @include flex-row;
     @include main-text;
@@ -97,6 +102,8 @@
 }
 
 .container {
+    width: 100%;
+    box-shadow: 0px 1px 4px grey;
     padding: 1rem;
     @include flex-column;
     justify-content: space-between;

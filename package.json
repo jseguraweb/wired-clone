@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-css": "dart-sass --watch stylesheet/scss/main.scss stylesheet/style.css --style compressed"
+    "watch-css": "dart-sass --watch stylesheet/scss/main.scss stylesheet/style.css --style compressed",
+    "prefix": "postcss stylesheet/*.css --use autoprefixer -d build/"
   },
   "author": "Jaime Segura",
   "license": "ISC",
   "devDependencies": {
-    "dart-sass": "^1.24.4"
+    "autoprefixer": "^9.7.3",
+    "dart-sass": "^1.24.4",
+    "postcss-cli": "^7.1.0"
   }
 }
