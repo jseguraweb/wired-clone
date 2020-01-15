@@ -43,10 +43,11 @@ optionalGift.addEventListener("click", function(event){
 
 const marketUS = document.querySelectorAll(".market")[0];
 const marketInt = document.querySelectorAll(".market")[1];
+const otherCountries = document.querySelector(".deliver-to");
 
 const changeMarket = (eventOne, eventTwo) => {
     if(eventOne.classList.contains("pressed-button")){
-        eventOne.lastElementChild.checked = true
+        eventOne.lastElementChild.checked = true;
     } else {
         eventTwo.classList.remove("pressed-button");
         eventOne.classList.add("pressed-button");
@@ -62,3 +63,10 @@ marketInt.addEventListener("click", function(){
     changeMarket(marketInt, marketUS);
 });
 
+marketInt.addEventListener("click", function(){
+    otherCountries.style.display = "flex";
+});
+
+marketUS.addEventListener("click", function(){
+    otherCountries.style.display = "none";
+});
