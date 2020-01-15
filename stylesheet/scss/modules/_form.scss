@@ -17,8 +17,6 @@ form {
 }
 
 fieldset {
-    @include thin-bottom-border;
-
     h3 {
         @include mini-heading;
         text-transform: uppercase;
@@ -28,6 +26,12 @@ fieldset {
     legend {
         text-align: center;
     }
+    
+}
+
+.step {
+    padding: 1rem;
+    @include thin-bottom-border;
 }
 
 .form-header {
@@ -182,6 +186,6 @@ fieldset {
 #US,
 #international {
     opacity: 0;
-    width: 0;
-    height: 0;
+    width: 0px;
+    height: 0px;
 }

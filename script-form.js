@@ -33,10 +33,32 @@ const changeSelectedButton = (event) => {
         giftIsSelected = true;
         // console.log(`giftIsSelected is now ${giftIsSelected}`);
     }
-    
 };
 
 optionalGift.addEventListener("click", function(event){
     changeSelectedButton(optionalGift);
     event.preventDefault();
 });
+
+
+const marketUS = document.querySelectorAll(".market")[0];
+const marketInt = document.querySelectorAll(".market")[1];
+
+const changeMarket = (eventOne, eventTwo) => {
+    if(eventOne.classList.contains("pressed-button")){
+        eventOne.lastElementChild.checked = true
+    } else {
+        eventTwo.classList.remove("pressed-button");
+        eventOne.classList.add("pressed-button");
+        event.lastElementChild.checked = true;
+    }
+};
+
+marketUS.addEventListener("click", function(){
+    changeMarket(marketUS, marketInt);
+});
+
+marketInt.addEventListener("click", function(){
+    changeMarket(marketInt, marketUS);
+});
+
