@@ -99,13 +99,28 @@
     max-width: 25rem;
     height: auto;
     margin: 1rem auto;
-    background-color: $card-bkg;
-    border: 1px solid $blue;
-    padding: 1rem 1.5rem;
+    background-color: #fff;
+    border: 1px solid $bar-grey;
+    padding: 2rem 1.5rem;
     @include main-text;
     @include flex-column;
     justify-content: space-between;
+    position: relative;
     
+    .popular {
+        width: 100%;
+        height: auto;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: $blue;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
     .card-header {
     text-align: center;
         
@@ -166,9 +181,15 @@
         width: 10rem;
         height: auto;
         margin: 1rem auto;
+        border-radius: 10px;;
     }
 
     @media screen and (min-width: 600px){
         width: 80%;
     }
+}
+
+.selected-card {
+    background-color: $card-bkg;
+    border-color: $blue;
 }
