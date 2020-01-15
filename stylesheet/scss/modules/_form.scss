@@ -17,6 +17,8 @@ form {
 }
 
 fieldset {
+    width: 100%;
+    
     h3 {
         @include mini-heading;
         text-transform: uppercase;
@@ -30,6 +32,8 @@ fieldset {
 }
 
 .step {
+    width: auto;
+    max-width: 100%;
     padding: 1rem;
     @include thin-bottom-border;
 }
@@ -188,4 +192,27 @@ fieldset {
     opacity: 0;
     width: 0px;
     height: 0px;
+}
+
+.deliver-to {
+    width: 97%;
+    height: auto;
+    margin: 2rem auto 1rem;
+    @include main-text;
+    @include flex-column;
+
+    span {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    #deliver-to-country {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid grey;
+    }
+    
+    @media screen and (min-width: 600px){
+        width: 33rem;
+    }
 }
