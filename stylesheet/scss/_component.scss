@@ -98,7 +98,7 @@
 .card {
     max-width: 25rem;
     height: auto;
-    margin: 1rem auto;
+    margin: 0.5rem auto;
     background-color: #fff;
     border: 1px solid $bar-grey;
     padding: 2rem 1.5rem;
@@ -158,6 +158,7 @@
     }
 
     .advantage {
+        font-size: 0.9rem;
         position: relative;
         margin: 0rem 0 0.5rem 1rem;
         padding-left: 0.5rem;
@@ -184,9 +185,6 @@
         border-radius: 10px;;
     }
 
-    @media screen and (min-width: 600px){
-        width: 80%;
-    }
 }
 
 .selected-card {
