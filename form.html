@@ -36,7 +36,6 @@
                 <li class="li-step two"><a href="#plan">Plan</a></li>
                 <li class="li-step three"><a href="#payment">Payment</a></li>
                 <li class="li-step four"><a href="#shipping">Address</a></li>
-                <li class="li-step five"><a href="#submit">Submit</a></li>
             </ul>
             <div class="big-bar">
                 <div class="small-bar"></div>
@@ -156,80 +155,76 @@
                     </legend>
                     <p class="cancel">You may cancel at any time.</p>
                     <div class="wrapper-payments">
-                        <div class="wrapper-buttons">
-                            <label id="cc-button" for="cc">
-                                <div class="credit-debit pay-button rounded-border pressed-button">
-                                    <input type="radio" id="cc" name="payment" value="Credit Card">
-                                    <span>Credit
-                                        Card</span>
-                                </div>
-                            </label>
+                        <label id="cc-button" for="cc">
+                            <div class="credit-debit pay-button rounded-border pressed-button">
+                                <input type="radio" id="credit-debit-card" name="payment" value="Credit Card">
+                                <span>Credit
+                                    Card</span>
+                            </div>
+                        </label>
+                        <label id="amazon-button" for="amazon-pay">
+                            <div class="amazon pay-button rounded-border">
+                                <input type="radio" id="amazon-pay" name="payment" value="amazon-pay">
+                                <span><i class="fab fa-amazon"></i></span>
+                            </div>
+                        </label>
+                        <label id="paypal-button" for="paypal">
+                            <div class="pp pay-button rounded-border">
+                                <input type="radio" id="paypal" name="payment" value="PayPal">
+                                <span><i class="fab fa-paypal"></i></span>
+                            </div>
+                        </label>
 
-                            <label id="amazon-button" for="amazon-pay">
-                                <div class="amazon pay-button rounded-border">
-                                    <input type="radio" id="amazon-pay" name="payment" value="amazon-pay">
-                                    <span><i class="fab fa-amazon"></i></span>
-                                </div>
-                            </label>
-
-                            <label id="paypal-button" for="paypal">
-                                <div class="pp pay-button rounded-border">
-                                    <input type="radio" id="paypal" name="payment" value="PayPal">
-                                    <span><i class="fab fa-paypal"></i></span>
-                                </div>
-                            </label>
-                        </div>
-                        <div class="wrapper-payment-info">
-                            <label id="label-cc" for="cc-number">
-                                <span>Credit/Debit Card Number</span>
-                                <br>
-                                <input type="tel" class="cc" id="cc-number" name="cc-number" pattern="\d*"
-                                    maxlength="16" placeholder="1234 1234 1234 1234">
-                            </label>
-                            <label id="label-months" for="months">
-                                <span>Valid Thru</span>
-                                <br>
-                                <input type="text" class="cc" list="months-list" id="months" name="months-list"
-                                    placeholder="MM">
-                                <datalist id="months-list">
-                                    <option value="Jan"></option>
-                                    <option value="Feb"></option>
-                                    <option value="Mar"></option>
-                                    <option value="Apr"></option>
-                                    <option value="May"></option>
-                                    <option value="Jun"></option>
-                                    <option value="Jul"></option>
-                                    <option value="Aug"></option>
-                                    <option value="Sep"></option>
-                                    <option value="Oct"></option>
-                                    <option value="Nov"></option>
-                                    <option value="Dec"></option>
-                                </datalist>
-                            </label>
-
-                            <label id="label-years" for="years">
-                                <br>
-                                <input type="number" class="cc" list="years" id="years" name="years-list"
-                                    placeholder="YY">
-                                <datalist id="years">
-                                    <option value="2020"></option>
-                                    <option value="2021"></option>
-                                    <option value="2022"></option>
-                                    <option value="2023"></option>
-                                    <option value="2024"></option>
-                                    <option value="2025"></option>
-                                    <option value="2026"></option>
-                                    <option value="2027"></option>
-                                    <option value="2028"></option>
-                                    <option value="2029"></option>
-                                    <option value="2030"></option>
-                                </datalist>
-                            </label>
-
-                            <label id="label-cvv" for="cvv"><span>CVV</span>
-                                <br><input type="number" class="cc" id="cvv" name="cvv" pattern="\d*" maxlength="3">
-                            </label>
-                        </div> <!-- div.wrapper-payment-info -->
+                        <label id="label-cc" class="pos-relative" for="cc-number">
+                            <span>Credit/Debit Card Number</span>
+                            <br>
+                            <input type="tel" class="cc" id="cc-number" name="cc-number" pattern="\d*" maxlength="16"
+                                placeholder="1234 1234 1234 1234">
+                            <div class="definition-after"></div>
+                        </label>
+                        <label id="label-months" class="pos-relative" for="months">
+                            <span>Valid Thru</span>
+                            <br>
+                            <input type="text" class="cc" list="months-list" id="months" name="months-list"
+                                placeholder="MM">
+                            <datalist id="months-list">
+                                <option value="Jan"></option>
+                                <option value="Feb"></option>
+                                <option value="Mar"></option>
+                                <option value="Apr"></option>
+                                <option value="May"></option>
+                                <option value="Jun"></option>
+                                <option value="Jul"></option>
+                                <option value="Aug"></option>
+                                <option value="Sep"></option>
+                                <option value="Oct"></option>
+                                <option value="Nov"></option>
+                                <option value="Dec"></option>
+                            </datalist>
+                            <div class="definition-after"></div>
+                        </label>
+                        <label id="label-years" class="pos-relative" for="years">
+                            <br>
+                            <input type="number" class="cc" list="years" id="years" name="years-list" placeholder="YY">
+                            <datalist id="years">
+                                <option value="2020"></option>
+                                <option value="2021"></option>
+                                <option value="2022"></option>
+                                <option value="2023"></option>
+                                <option value="2024"></option>
+                                <option value="2025"></option>
+                                <option value="2026"></option>
+                                <option value="2027"></option>
+                                <option value="2028"></option>
+                                <option value="2029"></option>
+                                <option value="2030"></option>
+                            </datalist>
+                            <div class="definition-after"></div>
+                        </label>
+                        <label id="label-cvv" class="pos-relative" for="cvv"><span>CVV</span>
+                            <br><input type="number" class="cc" id="cvv" name="cvv" pattern="\d*" maxlength="3">
+                            <div class="definition-after"></div>
+                        </label>
                     </div> <!-- div.wrapper-payments -->
                     <div class="other-payments">
                         <div class="option-amazon">
@@ -262,79 +257,83 @@
                     </div>
                 </fieldset>
             </div>
-            <div class="step">
-                <fieldset id="shipping">
+            <div class="step" id="shipping">
+                <fieldset>
                     <legend>
                         <h3>Step 4. Shipping address</h3>
                     </legend>
                     <div class="optional">
-                        <label for="one-year-gift"><span>Yes, I would like to gift one year of WIRED for just
-                                $10.</span>
-                            <span class="checkbox-custom"></span>
-                            <input type="checkbox" id="one-year-gift" class="switch" name="one-year-gift"
-                                value="one-year-gift">
+                        <label for="gift" class="switch">
+                            <div class="checkbox-custom">
+                                <svg width="14" height="14" viewBox="-25 -20 184 133" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path id="check2" d="M8 58L59 125L176 8" stroke="white" stroke-width="35"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <input type="checkbox" id="gift2" name="gift2" value="gift2">
+                            <p>Yes, I would like to gift one year of WIRED for just 10€.</p>
                         </label>
                     </div>
-                    <fieldset id="personal-info">
-                        <legend>Enter Your Information</legend>
-                        <label for="first-name">First Name
-                            <input type="text" id="first-name" name="first-name">
+                    <div id="personal-info">
+                        <h5>Enter Your Information</h5>
+                        <label for="first-name">
+                            <span>First Name</span>
+                            <br><input type="text" id="first-name" name="first-name">
                         </label>
-                        <legend>Enter Your Information</legend>
-                        <label for="first-name">First Name
-                            <input type="text" id="first-name" name="first-name">
+                        <label for="last-name">
+                            <span>Last Name</span>
+                            <br><input type="text" id="last-name" name="last-name">
                         </label>
-                        <label for="last-name">Last Name
-                            <input type="text" id="last-name" name="last-name">
+                        <label for="street">
+                            <span>Street Address</span>
+                            <br><input type="text" id="street" name="street">
                         </label>
-                        <label for="street">Street Address
-                            <input type="text" id="street" name="street">
+                        <label for="apt">
+                            <span>Apt, Floor, Unit, etc. (optional)</span>
+                            <br><input type="text" id="apt" name="apt">
                         </label>
-                        <label for="apt">Apt, Floor, Unit, etc. (optional)
-                            <input type="text" id="apt" name="apt">
+                        <label for="city" id="ship-city">
+                            <span>City</span>
+                            <br><input type="text" id="city" name="city">
                         </label>
-                        <label for="city">City
-                            <input type="text" id="city" name="city">
+                        <label for="state" id="ship-state">
+                            <span>State</span>
+                            <br><input type="text" id="state" name="state">
                         </label>
-                        <label for="state">State
-                            <input type="text" id="state" name="state">
+                        <label for="zip" id="ship-zip">
+                            <span>Zip</span>
+                            <br><input type="text" id="zip" name="zip">
                         </label>
-                        <label for="zip">Zip
-                            <input type="text" id="zip" name="zip">
+                        <label id="info-email" class="pos-relative" for="email">
+                            <span>Email</span>
+                            <br><input type="email" id="email" name="email">
+                            <div class="definition-after"></div>
                         </label>
-                        <label for="email">Email
-                            <input type="email" id="email" name="email">
-                        </label>
-                    </fieldset>
+                    </div>
                 </fieldset>
-            </div>
-            <div class="renewal-info">
-                <h5>Automatic Renewal:</h5>
-                <p>
-                    Your subscription will automatically renew. You may cancel at any time. Before each renewal, we
-                    will
-                    send a reminder
-                    with the term and rate then in effect (current rates listed below). If you do nothing, we will
-                    charge the payment method
-                    you selected. To cancel, contact customer service as shown below to receive a full refund for
-                    all
-                    unserved issues.
-                </p>
-                <p>
-                    By subscribing you agree to our <a href="#">User Agreement</a> and <a href="">Privacy Policy &
-                        Cookie Statement</a>.
-                </p>
-            </div>
-            <div class="step">
-                <fieldset id="submit">
-                    <legend>
-                        <h3>Step 5. Review and submit</h3>
-                    </legend>
-                    <input type="submit" id="place-order" value="Place Order">
+
+                <div class="renewal-info">
+                    <h5>Automatic Renewal:</h5>
                     <p>
-                        <i class="fas fa-lock"></i> This transaction is secured with SSL encryption
+                        Your subscription will automatically renew. You may cancel at any time. Before each renewal, we
+                        will
+                        send a reminder
+                        with the term and rate then in effect (current rates listed below). If you do nothing, we will
+                        charge the payment method
+                        you selected. To cancel, contact customer service as shown below to receive a full refund for
+                        all
+                        unserved issues.
                     </p>
-                </fieldset>
+                    <p>
+                        By subscribing you agree to our <a href="#">User Agreement</a> and <a href="">Privacy Policy &
+                            Cookie Statement</a>.
+                    </p>
+                </div>
+            </div>
+            <div id="submit" class="pos-relative">
+                <input type="submit" id="place-order" value="Place Order">
+                <div class="definition-after"></div>
             </div>
         </form>
     </main>

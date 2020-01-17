@@ -200,6 +200,8 @@
     justify-content: center;
     padding: 1rem;
     color: grey;
+    font-size: 0.7rem;
+    font-weight: 600;
 
     input {
         opacity: 0;
@@ -212,5 +214,46 @@
         * {
             color: $blue;
         }
+    }
+}
+
+#submit {
+
+    width: 90%;
+    margin: 0 auto;
+    @include main-text;
+
+    #place-order {
+        width: 100%;
+        margin: 0 auto;
+        padding: 1.5em;
+        color: #fff;
+        font-weight: 600;
+        background-color: $blue;
+        border: none;
+        border-radius: 10px;
+
+        &:hover {
+            transform: scaleY(1.05);
+            box-shadow: 1px 1px 3px grey;;
+        }
+    }
+
+    .definition-after:after {
+        content: "This transaction is secured with SSL encryption";
+        position: absolute;
+        bottom: -1.5rem;
+        left: 15%;
+        font-size: 0.7rem;
+        color: grey;
+
+        @media screen and (min-width: 600px) {
+        left: 25%;
+    }
+    }
+
+    @media screen and (min-width: 600px) {
+        width: 35rem;
+        padding: 0 4rem;
     }
 }

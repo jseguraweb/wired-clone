@@ -34,3 +34,18 @@
         order: 3;
     }
 }
+
+// definitions in after elements
+
+.pos-relative {
+    position: relative;
+}
+
+.definition-after:after {
+    content: "";
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    font-size: 0.8rem;
+    color: grey;
+}
