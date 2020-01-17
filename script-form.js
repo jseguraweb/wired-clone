@@ -15,9 +15,12 @@ toggleOptions.addEventListener("click", function(){
 // "This is a gift" option at the beginning of the form
 
 // optionalGift is an input
-const optionalGift = document.querySelector(".switch");
+const optionalGift = document.querySelectorAll(".option-gift")[0];
 const giftCheck = document.querySelector("#gift");
 const check = document.querySelector("#check");
+const optionalGift2 = document.querySelectorAll(".option-gift")[1]
+const oneYearGift = document.querySelector("#gift2");
+const check2 = document.querySelector("#check2");
 
 let giftIsSelected = true;
 // console.log(`giftIsSelected is at the beginning ${giftIsSelected}`);
@@ -25,14 +28,14 @@ const changeSelectedButton = (event) => {
     if(giftIsSelected){
         // console.log("giftIsSelected is true!");
         event.classList.add("pressed-button");
-        check.style.stroke = "#057DBC";
+        event.children[0].children[0].children[0].style.stroke = "#057DBC";
         giftCheck.checked = true;
         giftIsSelected = false;
         // console.log(`giftIsSelected is now ${giftIsSelected}`);
     } else {
         // console.log("giftIsSelected is false!");
         event.classList.remove("pressed-button");
-        check.style.stroke = "#fff";
+        event.children[0].children[0].children[0].style.stroke = "#fff";
         event.firstElementChild.style.backgroundColor = "transparent";
         giftCheck.checked = false;
         giftIsSelected = true;
@@ -42,6 +45,11 @@ const changeSelectedButton = (event) => {
 
 optionalGift.addEventListener("click", function(event){
     changeSelectedButton(optionalGift);
+    event.preventDefault();
+});
+
+optionalGift2.addEventListener("click", function(event){
+    changeSelectedButton(optionalGift2);
     event.preventDefault();
 });
 
@@ -58,7 +66,7 @@ const changeMarket = (eventOne, eventTwo) => {
     } else {
         eventTwo.classList.remove("pressed-button");
         eventOne.classList.add("pressed-button");
-        event.lastElementChild.checked = true;
+        eventOne.lastElementChild.checked = true;
     }
 };
 
@@ -148,3 +156,9 @@ amazonButton.addEventListener("click", function(){
 paypalButton.addEventListener("click", function(){
     changePayment(paypalButton, creditCardButton, amazonButton);
 });
+
+
+// step 4: shipping
+
+
+
