@@ -1,0 +1,50 @@
+@use "./../_base.scss" as *;
+@use "./../_layout.scss" as *;
+@use "./../_component.scss" as *;
+
+footer {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 2rem;
+
+    @include main-text;
+
+    a {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    p {
+        margin: 1rem 0;
+        font-size: 0.8rem;
+    }
+
+    p:nth-child(1) {
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .wrapper-policy {
+        @include flex-row;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 1rem;
+
+        a:nth-child(1) {
+            margin-right: 0.5rem;
+        }
+    }
+
+    p:last-of-type{
+        text-align: center;
+    }
+
+    @media screen and (min-width: 800px) {
+        padding: 2rem 10rem;
+    }
+}
