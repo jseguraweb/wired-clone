@@ -255,6 +255,7 @@
         background-color: $blue;
         border: none;
         border-radius: 10px;
+        cursor: pointer;
 
         &:hover {
             transform: scaleY(1.05);

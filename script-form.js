@@ -122,3 +122,29 @@ sixMonthsSmallPlan.addEventListener("click", function(){
 
 // step 3: payment
 
+const creditCardButton = document.querySelectorAll(".pay-button")[0];
+const amazonButton = document.querySelectorAll(".pay-button")[1];
+const paypalButton = document.querySelectorAll(".pay-button")[2];
+
+const changePayment = (eventOne, eventTwo, eventThree) => {
+    if(eventOne.classList.contains("pressed-button")){
+        eventOne.lastElementChild.checked = true;
+    } else {
+        eventTwo.classList.remove("pressed-button");
+        eventThree.classList.remove("pressed-button");
+        eventOne.classList.add("pressed-button");
+        eventOne.lastElementChild.checked = true;
+    }
+};
+
+creditCardButton.addEventListener("click", function(){
+    changePayment(creditCardButton, amazonButton, paypalButton);
+});
+
+amazonButton.addEventListener("click", function(){
+    changePayment(amazonButton, paypalButton, creditCardButton);
+});
+
+paypalButton.addEventListener("click", function(){
+    changePayment(paypalButton, creditCardButton, amazonButton);
+});
