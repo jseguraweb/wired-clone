@@ -176,7 +176,8 @@
                                 <input type="radio" id="paypal" name="payment" value="PayPal">
                             </div>
                         </label>
-
+                    </div> <!-- div.wrapper-payments -->
+                    <div class="payment-with-cc">
                         <label id="label-cc" class="pos-relative" for="cc-number">
                             <span>Credit/Debit Card Number</span>
                             <br>
@@ -227,37 +228,39 @@
                             <br><input type="number" class="cc" id="cvv" name="cvv" pattern="\d*" maxlength="3">
                             <div class="definition-after"></div>
                         </label>
-                    </div> <!-- div.wrapper-payments -->
-                    <div class="other-payments">
-                        <div class="option-amazon">
-                            <a
-                                href="https://www.amazon.com/ap/signin?_encoding=UTF8&ignoreAuthState=1&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3Fref_%3Dnav_signin&switch_account="><img
-                                    src="./img/PwA.png" alt="link to amazon pay"></a>
-                        </div>
-                        <div class="option-paypal">
-                            <h6>Express Checkout:</h6>
-                            <p>
-                                Your pay method will be charged now and automatically before each renewal. We will
-                                send
-                                you a reminder with the term and
-                                rate then in effect (current rates listed below). If you do nothing, you will be
-                                charged. You may cancel at any time by
-                                contacting customer service as shown below.
-                            </p>
-                            <p>
-                                By subscribing you agree to our <a href="https://www.condenast.com/user-agreement/">User
-                                    Agreement</a> and <a href="https://www.condenast.com/privacy-policy/">Privacy
-                                    Policy
-                                    & Cookie Statement</a>.
-                            </p>
-                            <button>
-                                <a
-                                    href="https://www.paypal.com/checkoutnow?token=EC-23K72487K63826314&sessionID=a30003864e_mtk6mzy6mdk&env=production&locale.x=de_DE&fundingOffered=&logLevel=warn&sdkMeta=eyJ1cmwiOiJodHRwczovL3d3dy5wYXlwYWxvYmplY3RzLmNvbS9hcGkvY2hlY2tvdXQuanMifQ%3D%3D&uid=5ac882d456&version=4&xcomponent=1">Checkout
-                                    with <i class="fab fa-cc-paypal"></i></a>
-                            </button>
-                        </div>
                     </div>
-                </fieldset>
+
+                    <div class="payment-with-amazon">
+                        <a
+                            href="https://www.amazon.com/ap/signin?_encoding=UTF8&ignoreAuthState=1&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3Fref_%3Dnav_signin&switch_account="><img
+                                src="./img/PwA.png" alt="link to amazon pay"></a>
+                    </div>
+                    <div class="payment-with-paypal">
+                        <h6>Express Checkout:</h6>
+                        <p>
+                            Your pay method will be charged now and automatically before each renewal. We will
+                            send
+                            you a reminder with the term and
+                            rate then in effect (current rates listed below). If you do nothing, you will be
+                            charged. You may cancel at any time by
+                            contacting customer service as shown below.
+                        </p>
+                        <p>
+                            By subscribing you agree to our <a href="https://www.condenast.com/user-agreement/">User
+                                Agreement</a> and <a href="https://www.condenast.com/privacy-policy/">Privacy
+                                Policy
+                                & Cookie Statement</a>.
+                        </p>
+
+                        <a id="paypal-check-button" href="https://www.paypal.com">
+                            <span>Checkout with</span>
+                            <i class="fab fa-cc-paypal"></i>
+                        </a>
+
+                    </div>
+            </div>
+            </div>
+            </fieldset>
             </div>
             <div class="step" id="shipping">
                 <fieldset>

@@ -240,6 +240,27 @@
     }
 }
 
+#paypal-check-button {
+    @include flex-row;
+    align-items: center;
+    justify-content: center;
+    max-width: 20rem;
+    margin: 2rem auto 0;
+    background-color: #FEC438;
+    border: 1px solid orange;
+    padding: 0.2rem 1.5rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: #000;
+    font-weight: 600;
+
+    i {
+        color: rgb(0, 0, 143);
+        font-size: 2.4rem;
+        margin-left: 1rem;
+    }
+}
+
 #submit {
 
     width: 90%;

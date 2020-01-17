@@ -145,20 +145,35 @@ const changePayment = (eventOne, eventTwo, eventThree) => {
     }
 };
 
+const creditCardPayment = document.querySelector(".payment-with-cc");
+const amazonPayment = document.querySelector(".payment-with-amazon");
+const paypalPayment = document.querySelector(".payment-with-paypal");
+
 creditCardButton.addEventListener("click", function(){
     changePayment(creditCardButton, amazonButton, paypalButton);
+    creditCardPayment.style.display = "grid";
+    amazonPayment.style.display = "none";
+    paypalPayment.style.display = "none";
 });
 
 amazonButton.addEventListener("click", function(){
     changePayment(amazonButton, paypalButton, creditCardButton);
+    amazonPayment.style.display = "block";
+    paypalPayment.style.display = "none";
+    creditCardPayment.style.display = "none";
 });
 
 paypalButton.addEventListener("click", function(){
     changePayment(paypalButton, creditCardButton, amazonButton);
+    paypalPayment.style.display = "block";
+    creditCardPayment.style.display = "none";
+    amazonPayment.style.display = "none";
 });
 
 
-// step 4: shipping
+// other payment methods
+
+
 
 
 
