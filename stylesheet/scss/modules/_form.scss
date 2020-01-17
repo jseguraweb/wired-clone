@@ -19,24 +19,24 @@ form {
 fieldset {
     width: 100%;
     padding: 0;
+    margin: 0;
+}
+
+.step {
+    width: auto;
+    // max-width: 100%;
+    padding: 2rem 0;
+    @include thin-bottom-border;
     
     h3 {
         @include mini-heading;
         text-transform: uppercase;
         font-size: 1.2rem;
     }
-
+    
     legend {
         text-align: center;
     }
-    
-}
-
-.step {
-    width: auto;
-    max-width: 100%;
-    padding: 1rem 0;
-    @include thin-bottom-border;
 }
 
 .form-header {
@@ -219,23 +219,92 @@ fieldset {
     }
 }
 
+// plan section
+
 #plan {
     .wrapper {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-        grid-gap: 1rem;
-        padding: 0 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        grid-gap: 0.5rem;
+        padding: 1rem 1.5rem;
     }
 }
 
-@media screen and (min-width: 768px) {
-    .card:nth-of-type(1) {
-        order: 2;
+// payment section
+
+.cancel {
+    @include main-text;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.wrapper-payments {
+    background-color: rgb(81, 187, 81);
+    width: 90%;
+    height: 30vh;
+    margin: 0 auto;
+    @include main-text;
+    display: grid;
+    grid: repeat(3, 1fr), repeat(3, 1fr);
+
+    .wrapper-buttons {
+        @include flex-row;
+        justify-content: space-between;
     }
-    .card:nth-of-type(2) {
-        order: 1;
+
+    .wrapper-payment-info {
+        display: grid;
+        grid: repeat(2, 1fr)/ repeat(3, 1fr); 
+        grid-gap: 1rem;  
+
+        .cc {
+            width: 100%;
+            padding: 0.5rem;
+        }
+        
+        #label-cc {
+            grid-area: 1/1/2/-1;
+            #cc-number {
+                width: 100%;
+                background-color: red;
+            }
+        }
+
+        #label-months {
+            grid-area: 2/1/-1/2;
+            #months {
+                background-color: rgb(114, 179, 62);
+            }
+        }
+
+        #label-years {
+            grid-area: 2/2/-1/3;
+            #years {
+                background-color: rgb(27, 95, 84);
+            }
+        }
+
+        #label-cvv {
+            grid-area: 2/3/-1/-1;
+            #cvv {
+                background-color: rgb(65, 47, 47);
+            }
+        }
+        
     }
-    .card:nth-of-type(2) {
-        order: 3;
+
+    @media screen and (min-width: 600px) {
+        max-width: 60%;
+        padding: 4rem;
     }
+}
+
+
+
+// other payments
+
+.other-payments {
+    display: none;
 }

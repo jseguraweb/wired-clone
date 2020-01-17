@@ -149,80 +149,117 @@
                     </div>
                 </fieldset>
             </div>
-            <div class="step">
-                <fieldset id="payment">
+            <div class="step" id="payment">
+                <fieldset>
                     <legend>
                         <h3>Step 3. Payment details</h3>
                     </legend>
-                    <span>You may cancel at any time.</p>
-                        <div class="payments-wrapper">
-                            <label for="cc">
-                                <input type="checkbox" id="cc" name="cc" value="Credit Card">Credit Card
-                            </label>
-                            <label for="amazon-pay">
-                                <input type="checkbox" id="amazon-pay" name="amazon-pay" value="amazon-pay"><i
-                                    class="fab fa-amazon"></i>
-                            </label>
-                            <label for="paypal">
-                                <input type="checkbox" id="paypal" name="paypal" value="PayPal"><i
-                                    class="fab fa-cc-paypal"></i>
-                            </label>
-                        </div>
-                        <div class="payment-options">
-                            <div class="option-cc">
-                                <label for="credit-debit-card">Credit/Debit Card Number
-                                    <input type="tel" id="cc-number" name="cc-number" pattern="\d*" maxlength="16"
-                                        placeholder="1234 1234 1234 1234">
-                                </label>
-                                <div class="wrap-cc-data">
-                                    <div class="cc-info">
-                                        <label for="months">Valid Thru
-                                            <input type="text" list="months" id="months-list" name="months-list"
-                                                placeholder="MM">
-                                        </label>
-                                        <datalist id="months">
-                                            <option value="Jan"></option>
-                                            <option value="Feb"></option>
-                                            <option value="Mar"></option>
-                                            <option value="Apr"></option>
-                                            <option value="May"></option>
-                                            <option value="Jun"></option>
-                                            <option value="Jul"></option>
-                                            <option value="Aug"></option>
-                                            <option value="Sep"></option>
-                                            <option value="Oct"></option>
-                                            <option value="Nov"></option>
-                                            <option value="Dec"></option>
-                                        </datalist>
-                                    </div>
-                                    <div class="cc-info">
-                                        <label for="years">
-                                            <input type="text" list="years" id="years-list" name="years-list"
-                                                placeholder="YY">
-                                        </label>
-                                        <datalist id="years">
-                                            <option value="2020"></option>
-                                            <option value="2021"></option>
-                                            <option value="2022"></option>
-                                            <option value="2023"></option>
-                                            <option value="2024"></option>
-                                            <option value="2025"></option>
-                                            <option value="2026"></option>
-                                            <option value="2027"></option>
-                                            <option value="2028"></option>
-                                            <option value="2029"></option>
-                                            <option value="2030"></option>
-                                        </datalist>
-                                    </div>
-                                    <div class="cc-info">
-                                        <label for="cvv">CVV
-                                            <input type="number" id="cvv" name="cvv" pattern="\d*" maxlength="3">
-                                        </label>
-                                    </div>
+                    <p class="cancel">You may cancel at any time.</p>
+                    <div class="wrapper-payments">
+                        <div class="wrapper-buttons">
+                            <label id="cc-button" for="cc">
+                                <div class="credit-debit pay-button rounded-border pressed-button">
+                                    <input type="radio" id="cc" name="payment" value="Credit Card">
+                                    <span>Credit
+                                        Card</span>
                                 </div>
-                                <!--div.wrap-cc-data-->
-                            </div>
+                            </label>
+
+                            <label id="amazon-button" for="amazon-pay">
+                                <div class="amazon pay-button rounded-border">
+                                    <input type="radio" id="amazon-pay" name="payment" value="amazon-pay">
+                                    <span><i class="fab fa-amazon"></i></span>
+                                </div>
+                            </label>
+
+                            <label id="paypal-button" for="paypal">
+                                <div class="pp pay-button rounded-border">
+                                    <input type="radio" id="paypal" name="payment" value="PayPal">
+                                    <span><i class="fab fa-paypal"></i></span>
+                                </div>
+                            </label>
                         </div>
+                        <div class="wrapper-payment-info">
+                            <label id="label-cc" for="cc-number">
+                                <span>Credit/Debit Card Number</span>
+                                <br>
+                                <input type="tel" class="cc" id="cc-number" name="cc-number" pattern="\d*"
+                                    maxlength="16" placeholder="1234 1234 1234 1234">
+                            </label>
+                            <label id="label-months" for="months">
+                                <span>Valid Thru</span>
+                                <br>
+                                <input type="text" class="cc" list="months-list" id="months" name="months-list"
+                                    placeholder="MM">
+                                <datalist id="months-list">
+                                    <option value="Jan"></option>
+                                    <option value="Feb"></option>
+                                    <option value="Mar"></option>
+                                    <option value="Apr"></option>
+                                    <option value="May"></option>
+                                    <option value="Jun"></option>
+                                    <option value="Jul"></option>
+                                    <option value="Aug"></option>
+                                    <option value="Sep"></option>
+                                    <option value="Oct"></option>
+                                    <option value="Nov"></option>
+                                    <option value="Dec"></option>
+                                </datalist>
+                            </label>
+
+                            <label id="label-years" for="years">
+                                <br>
+                                <input type="number" class="cc" list="years" id="years" name="years-list"
+                                    placeholder="YY">
+                                <datalist id="years">
+                                    <option value="2020"></option>
+                                    <option value="2021"></option>
+                                    <option value="2022"></option>
+                                    <option value="2023"></option>
+                                    <option value="2024"></option>
+                                    <option value="2025"></option>
+                                    <option value="2026"></option>
+                                    <option value="2027"></option>
+                                    <option value="2028"></option>
+                                    <option value="2029"></option>
+                                    <option value="2030"></option>
+                                </datalist>
+                            </label>
+
+                            <label id="label-cvv" for="cvv"><span>CVV</span>
+                                <br><input type="number" class="cc" id="cvv" name="cvv" pattern="\d*" maxlength="3">
+                            </label>
+                        </div> <!-- div.wrapper-payment-info -->
+                    </div> <!-- div.wrapper-payments -->
+                    <div class="other-payments">
+                        <div class="option-amazon">
+                            <a
+                                href="https://www.amazon.com/ap/signin?_encoding=UTF8&ignoreAuthState=1&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3Fref_%3Dnav_signin&switch_account="><img
+                                    src="./img/PwA.png" alt="link to amazon pay"></a>
+                        </div>
+                        <div class="option-paypal">
+                            <h6>Express Checkout:</h6>
+                            <p>
+                                Your pay method will be charged now and automatically before each renewal. We will
+                                send
+                                you a reminder with the term and
+                                rate then in effect (current rates listed below). If you do nothing, you will be
+                                charged. You may cancel at any time by
+                                contacting customer service as shown below.
+                            </p>
+                            <p>
+                                By subscribing you agree to our <a href="https://www.condenast.com/user-agreement/">User
+                                    Agreement</a> and <a href="https://www.condenast.com/privacy-policy/">Privacy
+                                    Policy
+                                    & Cookie Statement</a>.
+                            </p>
+                            <button>
+                                <a
+                                    href="https://www.paypal.com/checkoutnow?token=EC-23K72487K63826314&sessionID=a30003864e_mtk6mzy6mdk&env=production&locale.x=de_DE&fundingOffered=&logLevel=warn&sdkMeta=eyJ1cmwiOiJodHRwczovL3d3dy5wYXlwYWxvYmplY3RzLmNvbS9hcGkvY2hlY2tvdXQuanMifQ%3D%3D&uid=5ac882d456&version=4&xcomponent=1">Checkout
+                                    with <i class="fab fa-cc-paypal"></i></a>
+                            </button>
+                        </div>
+                    </div>
                 </fieldset>
             </div>
             <div class="step">

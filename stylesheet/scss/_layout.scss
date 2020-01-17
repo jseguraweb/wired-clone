@@ -20,3 +20,17 @@
 @mixin thin-bottom-border {
     border-bottom: 1px solid $bar-grey;
 }
+
+// media queries
+
+@media screen and (min-width: 928px) {
+    .card:nth-of-type(1) {
+        order: 2;
+    }
+    .card:nth-of-type(2) {
+        order: 1;
+    }
+    .card:nth-of-type(2) {
+        order: 3;
+    }
+}

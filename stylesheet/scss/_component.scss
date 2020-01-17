@@ -98,10 +98,10 @@
 .card {
     max-width: 25rem;
     height: auto;
-    margin: 0.5rem auto;
+    margin: 0 auto;
     background-color: #fff;
     border: 1px solid $bar-grey;
-    padding: 2rem 1.5rem;
+    padding: 2rem 0.8rem;
     @include main-text;
     @include flex-column;
     justify-content: space-between;
@@ -190,4 +190,27 @@
 .selected-card {
     background-color: $card-bkg;
     border-color: $blue;
+}
+
+// pay buttons
+
+.pay-button {
+    @include flex-column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: grey;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    &:hover {
+        cursor: pointer;
+        * {
+            color: $blue;
+        }
+    }
 }
