@@ -224,10 +224,13 @@ fieldset {
 
 #plan {
     .wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-        grid-gap: 0.5rem;
-        padding: 1rem 1.5rem;
+        @include flex-row;
+        justify-content: center;
+        margin: 1.5rem 0;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
     }
 }
 
