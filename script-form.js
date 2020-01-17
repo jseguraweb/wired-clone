@@ -77,3 +77,48 @@ marketInt.addEventListener("click", function(){
 marketUS.addEventListener("click", function(){
     otherCountries.style.display = "none";
 });
+
+
+// step 2: plan
+
+const oneYearPlan = document.querySelectorAll(".select-button")[0];
+const sixMonthsBigPlan = document.querySelectorAll(".select-button")[1];
+const sixMonthsSmallPlan = document.querySelectorAll(".select-button")[2];
+const popularLabel = document.querySelector(".popular");
+
+if(oneYearPlan.classList.contains("pressed-button")){
+    popularLabel.style.opacity = "1";
+}
+
+const changePlan = (eventOne, eventTwo, eventThree) => {
+    if(eventOne.classList.contains("pressed-button")){
+        eventOne.lastElementChild.checked = true;
+    } else {
+        eventTwo.classList.remove("pressed-button");
+        eventTwo.parentElement.parentElement.classList.remove("selected-card");
+        eventTwo.parentElement.previousElementSibling.previousElementSibling.style.opacity = "0";
+        eventThree.classList.remove("pressed-button");
+        eventThree.parentElement.parentElement.classList.remove("selected-card");
+        eventThree.parentElement.previousElementSibling.previousElementSibling.style.opacity = "0";
+        eventOne.classList.add("pressed-button");
+        eventOne.parentElement.parentElement.classList.add("selected-card");
+        eventOne.parentElement.previousElementSibling.previousElementSibling.style.opacity = "1";
+        eventOne.lastElementChild.checked = true;
+    }
+};
+
+oneYearPlan.addEventListener("click", function(){
+    changePlan(oneYearPlan, sixMonthsBigPlan, sixMonthsSmallPlan);
+});
+
+sixMonthsBigPlan.addEventListener("click", function(){
+    changePlan(sixMonthsBigPlan, sixMonthsSmallPlan, oneYearPlan);
+});
+
+sixMonthsSmallPlan.addEventListener("click", function(){
+    changePlan(sixMonthsSmallPlan, oneYearPlan, sixMonthsBigPlan);
+});
+
+
+// step 3: payment
+
