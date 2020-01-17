@@ -1,3 +1,5 @@
+// "more options" at the top right of the screen
+
 const toggleOptions = document.querySelector("#toggle-options");
 const optionsMenu = document.querySelector("#options-menu");
 
@@ -8,6 +10,9 @@ toggleOptions.addEventListener("click", function(){
         optionsMenu.style.display = "flex";
     }
 });
+
+
+// "This is a gift" option at the beginning of the form
 
 // optionalGift is an input
 const optionalGift = document.querySelector(".switch");
@@ -40,6 +45,8 @@ optionalGift.addEventListener("click", function(event){
     event.preventDefault();
 });
 
+
+// Step 1. Location:
 
 const marketUS = document.querySelectorAll(".market")[0];
 const marketInt = document.querySelectorAll(".market")[1];
