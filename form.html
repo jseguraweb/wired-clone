@@ -182,14 +182,14 @@
                             <span>Credit/Debit Card Number</span>
                             <br>
                             <input type="tel" class="cc" id="cc-number" name="cc-number" pattern="\d*" maxlength="16"
-                                placeholder="1234 1234 1234 1234">
+                                placeholder="1234 1234 1234 1234" required>
                             <div class="definition-after"></div>
                         </label>
                         <label id="label-months" class="pos-relative" for="months">
                             <span>Valid Thru</span>
                             <br>
                             <input type="text" class="cc" list="months-list" id="months" name="months-list"
-                                placeholder="MM">
+                                placeholder="MM" required>
                             <datalist id="months-list">
                                 <option value="Jan"></option>
                                 <option value="Feb"></option>
@@ -208,8 +208,9 @@
                         </label>
                         <label id="label-years" class="pos-relative" for="years">
                             <br>
-                            <input type="number" class="cc" list="years" id="years" name="years-list" placeholder="YY">
-                            <datalist id="years">
+                            <input type="number" class="cc" list="years-list" id="years" name="years-list"
+                                placeholder="YY" required>
+                            <datalist id="years-list">
                                 <option value="2020"></option>
                                 <option value="2021"></option>
                                 <option value="2022"></option>
@@ -225,7 +226,8 @@
                             <div class="definition-after"></div>
                         </label>
                         <label id="label-cvv" class="pos-relative" for="cvv"><span>CVV</span>
-                            <br><input type="number" class="cc" id="cvv" name="cvv" pattern="\d*" maxlength="3">
+                            <br><input type="number" class="cc" id="cvv" name="cvv" pattern="\d*" maxlength="3"
+                                required>
                             <div class="definition-after"></div>
                         </label>
                     </div>
@@ -284,15 +286,15 @@
                         <h5>Enter Your Information</h5>
                         <label for="first-name">
                             <span>First Name</span>
-                            <br><input type="text" id="first-name" name="first-name">
+                            <br><input type="text" id="first-name" name="first-name" required>
                         </label>
                         <label for="last-name">
                             <span>Last Name</span>
-                            <br><input type="text" id="last-name" name="last-name">
+                            <br><input type="text" id="last-name" name="last-name" required>
                         </label>
                         <label for="street">
                             <span>Street Address</span>
-                            <br><input type="text" id="street" name="street">
+                            <br><input type="text" id="street" name="street" required>
                         </label>
                         <label for="apt">
                             <span>Apt, Floor, Unit, etc. (optional)</span>
@@ -300,19 +302,19 @@
                         </label>
                         <label for="city" id="ship-city">
                             <span>City</span>
-                            <br><input type="text" id="city" name="city">
+                            <br><input type="text" id="city" name="city" required>
                         </label>
                         <label for="state" id="ship-state">
                             <span>State</span>
-                            <br><input type="text" id="state" name="state">
+                            <br><input type="text" id="state" name="state" required>
                         </label>
                         <label for="zip" id="ship-zip">
                             <span>Zip</span>
-                            <br><input type="text" id="zip" name="zip">
+                            <br><input type="text" id="zip" name="zip" required>
                         </label>
                         <label id="info-email" class="pos-relative" for="email">
                             <span>Email</span>
-                            <br><input type="email" id="email" name="email">
+                            <br><input type="email" id="email" name="email" required>
                             <div class="definition-after"></div>
                         </label>
                     </div>
