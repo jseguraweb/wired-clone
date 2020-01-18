@@ -45,7 +45,7 @@ This file will be edited at the time I'm working on this project
 
 ### How did I invested all these hours?
 
-![](./img/time-planing.png
+![](./img/time-planing.png)
 
 ## New skills (to research):
 
