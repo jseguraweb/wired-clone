@@ -40,24 +40,27 @@ This file will be edited at the time I'm working on this project
 
 ## Time invested
 
-- Final date: ...
-- Time invested: ...
+- Final date: 18 jan 2020
+- Time invested: 34 hours
 
 ### How did I invested all these hours?
 
-...
+![](./img/time-planing.png
 
 ## New skills (to research):
 
 - Forms
+- Navigate through the different elements using JS and, of course, with a big help of the console
 
 ## Challenges + lessons learned:
 
 - Getting used to SASS
+- Keep learning JS to manipulate the HMTL
+- Grid
 
 ## Achievements: 
 
-...
+- manipulate DOM with JS to manage to change the style of a specific element, change style of each plan with a click, or changing between international and US location..
 
 ## Ideas for the future:
 
