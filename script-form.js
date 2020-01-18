@@ -96,6 +96,7 @@ const popularLabel = document.querySelector(".popular");
 
 if(oneYearPlan.classList.contains("pressed-button")){
     popularLabel.style.opacity = "1";
+    oneYearPlan.children[0].style.fontWeight = "600";
 }
 
 const changePlan = (eventOne, eventTwo, eventThree) => {
@@ -104,11 +105,14 @@ const changePlan = (eventOne, eventTwo, eventThree) => {
     } else {
         eventTwo.classList.remove("pressed-button");
         eventTwo.parentElement.parentElement.classList.remove("selected-card");
+        eventTwo.children[0].style.fontWeight = "400";
         eventTwo.parentElement.previousElementSibling.previousElementSibling.style.opacity = "0";
         eventThree.classList.remove("pressed-button");
         eventThree.parentElement.parentElement.classList.remove("selected-card");
+        eventThree.children[0].style.fontWeight = "400";
         eventThree.parentElement.previousElementSibling.previousElementSibling.style.opacity = "0";
         eventOne.classList.add("pressed-button");
+        eventOne.children[0].style.fontWeight = "600";
         eventOne.parentElement.parentElement.classList.add("selected-card");
         eventOne.parentElement.previousElementSibling.previousElementSibling.style.opacity = "1";
         eventOne.lastElementChild.checked = true;
