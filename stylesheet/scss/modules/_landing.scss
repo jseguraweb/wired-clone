@@ -67,6 +67,10 @@ body {
         @include mini-heading;
         @include lead;
         background-color:#12679B;
+
+        @media screen and (max-width: 500px){
+        font-size: 0.8rem;
+    }
     }
     
 
@@ -92,6 +96,10 @@ body {
     color: #fff;
     font-weight: 600;
     font-size: 1.6rem;
+
+    @media screen and (max-width: 500px){
+        font-size: 0.9rem;
+    }
 }
 
 .subscribe-btn {
@@ -101,6 +109,10 @@ body {
     background-color: #000;
     border-radius: 0;
     padding: 0.8rem 2rem;
+
+    @media screen and (max-width: 500px){
+        font-size: 0.7rem;
+    }
 }
 
 .container {
@@ -129,7 +141,6 @@ section {
 
     .img-big-article {
         @include image-setting;
-        background-image: url("../../img/backgrounds/pic.jpg");
     }
 
     .text-wrapper {
@@ -147,17 +158,25 @@ section {
 
 .small-article {
     display: grid;
+    height: auto;
     grid-template-columns: 1fr 4fr;
     grid-gap: 1rem;
     padding: 1rem;
+
+    .text-wrapper {
+        @include flex-column;
+        justify-content: center;
+    }
 
     h2 {
         font-size: 1rem;
     }
 
     .img-small-article {
+        min-width: 100px;
+        max-width: 150px;
+        height: 100px;
         @include image-setting;
-        background-image: url("../../img/backgrounds/pic.jpg");
     }
 }
 

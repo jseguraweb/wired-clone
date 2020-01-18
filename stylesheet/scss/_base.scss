@@ -44,6 +44,8 @@ $card-bkg: #E5F2F8;
     display: block;
     width: 120px;
     height: auto;
+    position: relative;
+    left: 1.5rem;
 }
 
 @mixin main-text {
@@ -90,4 +92,46 @@ h4 {
 @mixin form-heading {
     font-size: 1rem;
     text-transform: uppercase;
+}
+
+// images
+
+.pic-1{
+    background-image: url("./../../img/backgrounds/pic.jpg");
+}
+
+.pic-2{
+    background-image: url("./../../img/backgrounds/pic2.jpg");
+}
+
+.pic-3{
+    background-image: url("./../../img/backgrounds/pic3.jpg");
+}
+
+.pic-4{
+    background-image: url("./../../img/backgrounds/pic4.jpg");
+}
+
+.pic-5{
+    background-image: url("./../../img/backgrounds/pic5.jpg");
+}
+
+.pic-6{
+    background-image: url("./../../img/backgrounds/pic6.jpg");
+}
+
+.pic-7{
+    background-image: url("./../../img/backgrounds/pic7.jpg");
+}
+
+.pic-8{
+    background-image: url("./../../img/backgrounds/pic8.jpg");
+}
+
+.pic-9{
+    background-image: url("./../../img/backgrounds/pic9.jpg");
+}
+
+.pic-10{
+    background-image: url("./../../img/backgrounds/pic10.jpg");
 }
