@@ -1,12 +1,12 @@
-# IMITATING WIRED MAGAZINE FORM
+# <a href="https://jseguraweb.github.io/wired-clone/form.html">Cloning WIRED MAGAZINE form</a>
 
-## Description:
-
-Project of imitating a landing page and a form in order to get used to SASS and creating forms ("https://www.wired.com/") and make it responsive.
+> Project of imitating a landing page and a form in order to get used to SASS and creating forms ("https://www.wired.com/") and make it responsive.
 
 This file will be edited at the time I'm working on this project
 
-## Details:
+![](screenshot.png)
+
+> ## Details:
 
 - It's about practicing. The intended user and the client is only me. 
 - Goal: include it in my portfolio.
@@ -17,7 +17,7 @@ This file will be edited at the time I'm working on this project
     - font awesome icons
     - colors
 
-## Priorities:
+> ## Priorities:
 
 1. Start a Repository on GitHub
 2. Create a Wireframe
@@ -45,7 +45,7 @@ This file will be edited at the time I'm working on this project
 
 ### How did I invested all these hours?
 
-![](./img/time-planing.png
+![](./img/time-planing.png)
 
 ## New skills (to research):
 
@@ -55,8 +55,9 @@ This file will be edited at the time I'm working on this project
 ## Challenges + lessons learned:
 
 - Getting used to SASS
-- Keep learning JS to manipulate the HMTL
+- Keep learning JS to manipulate the HTML
 - Grid
+- Working with modules in Sass
 
 ## Achievements: 
 
